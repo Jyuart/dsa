@@ -1,0 +1,24 @@
+.tree {
+	max-width: max-content;
+	margin: auto;
+	gap: 10px;
+}
+
+.level {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.node {
+	background: black;
+	width: 30px;
+	height: 30px;
+	margin: auto;
+	color: white;
+	padding:5px;
+}
+
+.highlight {
+	background: darkgray;
+}
