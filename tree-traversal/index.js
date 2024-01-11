@@ -66,7 +66,7 @@ function traverse(head, traverseType) {
     return path;
 }
 function highlight_path(path) {
-    let idx = 1;
+    let idx = 0;
     path.forEach(el => {
         const node = document.querySelector(`[data-idx="${el}"]`);
         setTimeout(() => {
@@ -74,9 +74,9 @@ function highlight_path(path) {
         }, idx++ * 200);
     });
 }
-const root = { value: Math.floor(Math.random() * 99), idx: idx };
+const root = { value: Math.floor(Math.random() * 99), idx: idx++ };
 fill_tree(root, 1, MAX_LEVEL);
-const result = walk_and_draw(root, 1);
+walk_and_draw(root, 1);
 const preButton = document.querySelector('.pre');
 const inButton = document.querySelector('.in');
 const postButton = document.querySelector('.post');
